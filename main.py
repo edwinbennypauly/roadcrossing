@@ -7,6 +7,16 @@ screen.setup(600,600)
 screen.bgcolor("white")
 screen.tracer(0)
 
+def game_over():
+    screen.clear()
+    pedastrian.end()
+    screen.update()
+def game_won():
+    screen.clear()
+    pedastrian.won()
+    screen.update()
+
+
 pedastrian = PedasTrian()
 blocks =Blocks()
 
@@ -24,6 +34,13 @@ while game_on:
         blocks.random_blocks()
     blocks.blocks_move()
     blocks.remove_off_screen_blocks()
+    for segment in blocks.segments:
+        if segment.distance(pedastrian) < 25:
+            game_on = False
+            game_over()
+    if pedastrian.ycor() >160:
+        game_on = False
+        game_won()
     n += 1
 
 

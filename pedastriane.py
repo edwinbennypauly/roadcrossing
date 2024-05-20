@@ -12,3 +12,22 @@ class PedasTrian(Turtle):
 
     def move_forward(self):
         self.forward(10)
+
+    def end(self):
+        self.shape("square")
+        self.penup()
+        self.hideturtle()
+        self.goto(x=0,y=0)
+        self.write(arg="GAME OVER",align="center",font=("Arial",20,"bold",))
+
+
+    def won(self):
+        self.shape("square")
+        self.penup()
+        self.hideturtle()
+        self.goto(x=0,y=0)
+        self.write(arg="YOU WON",align="center",font=("Arial",20,"bold"))
+
+
+
+

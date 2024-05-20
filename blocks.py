@@ -9,7 +9,7 @@ class Blocks():
         colours = ["black","blue","yellow","green","orange","red"]
         new_turtle = Turtle()
         new_turtle.shape("square")
-        new_turtle.shapesize(stretch_wid=1, stretch_len=5)
+        new_turtle.shapesize(stretch_wid=1, stretch_len=3)
         new_turtle.color(random.choice(colours))
         new_turtle.left(180)
         new_turtle.penup()
