@@ -8,6 +8,9 @@ class PedasTrian(Turtle):
         self.penup()
         self.goto(x=0,y=-250)
         self.left(90)
+    def restart(self):
+        self.goto(x=0,y=-250)
+
 
 
     def move_forward(self):
